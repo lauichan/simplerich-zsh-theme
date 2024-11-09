@@ -73,6 +73,13 @@ precmd() { # cspell:disable-line
 
         # cmd
         local cmd="$(fc -ln -1)"
+        
+        # clear 명령어는 기록을 남기지 않고 종료
+        if [ "$cmd" = "clear" ]; then
+          _SIMPLERICH_COMMAND_TIME_BEGIN="-20200325"
+          return 1
+        fi
+
         local color_cmd=""
         local command_result=$1
         if $command_result; then
