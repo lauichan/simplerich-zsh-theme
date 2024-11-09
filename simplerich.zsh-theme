@@ -96,7 +96,7 @@ precmd() { # cspell:disable-line
         fi
         cost="[cost ${cost}s]"
 
-        echo "${time} $fg[cyan]${cost}${color_reset} ${cmd}\n\n"
+        echo "${time} $fg[cyan]${cost}${color_reset} ${cmd}"
     }
 
     # last_cmd
